@@ -1,0 +1,11 @@
+title: SSH Brute Force - Repeated Auth Failures
+id: ssh-brute-force-001
+severity: high
+description: >
+  Multiple failed SSH authentication attempts from the same source IP
+  within a short window, indicative of password guessing / brute force.
+detection:
+  event_type: auth_failure
+  group_by: src_ip
+  window_minutes: 5
+  threshold: 5

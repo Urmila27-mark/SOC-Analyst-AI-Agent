@@ -1,0 +1,11 @@
+title: Network IDS Alert (Suricata)
+id: suricata-alert-passthrough-001
+severity: medium
+description: >
+  Suricata fired a signature match. Severity is refined by the agent
+  during triage using the signature category and enrichment lookups.
+detection:
+  event_type: suricata_alert
+  group_by: src_ip
+  window_minutes: 15
+  threshold: 1

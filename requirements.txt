@@ -1,0 +1,10 @@
+sqlalchemy>=2.0
+pydantic>=2.0
+python-dateutil
+watchdog
+pyyaml
+anthropic
+fastapi
+uvicorn[standard]
+streamlit
+requests

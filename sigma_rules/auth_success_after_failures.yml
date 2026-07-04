@@ -1,0 +1,16 @@
+title: Successful Login Following Failed Attempts (Possible Compromise)
+id: auth-success-after-failures-001
+severity: critical
+description: >
+  A successful authentication occurred from the same source IP that
+  recently produced multiple failed attempts. This is a strong signal
+  that a brute force or credential-stuffing attempt succeeded.
+detection:
+  type: sequence
+  group_by: src_ip
+  window_minutes: 10
+  first:
+    event_type: auth_failure
+    min_count: 3
+  then:
+    event_type: auth_success
