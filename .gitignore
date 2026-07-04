@@ -1,0 +1,25 @@
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Generated at runtime -- never commit these
+soc_agent.db
+*.db
+.ingest_offsets.json
+
+# Secrets -- if you ever create a .env file, it must never be committed
+.env
+.env.local
+
+# OS/editor cruft
+.DS_Store
+.vscode/
+.idea/
+*.swp
