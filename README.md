@@ -102,7 +102,6 @@ soc-agent/
 
 **Windows (Command Prompt — recommended over PowerShell to avoid script-execution restrictions):**
 ```cmd
-tar -xzf soc-agent.tar.gz
 cd soc-agent
 python -m venv venv
 venv\Scripts\activate.bat
@@ -111,7 +110,6 @@ pip install -r requirements.txt
 
 **Windows (PowerShell alternative):**
 ```powershell
-tar -xzf soc-agent.tar.gz
 cd soc-agent
 python -m venv venv
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
@@ -121,14 +119,11 @@ pip install -r requirements.txt
 
 **Mac/Linux:**
 ```bash
-tar -xzf soc-agent.tar.gz
 cd soc-agent
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-
-If `python` isn't recognized on Windows, try `py` instead in every command.
 
 ### 2. (Optional, only for live triage) Set your Anthropic API key
 
